@@ -4,8 +4,9 @@ body{
 }
 
 .sections{
-    padding: 0;
-    margin: 0;
+    padding: 4em 1em 0 1em;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 /* --------------------------------  Navigation   -------------------------------------------*/
 
@@ -134,7 +135,7 @@ body{
 
   /*---------------------------------------------- Intro --------------------------------------*/
   
-  .home-intro {
+  #home-intro {
     padding: 40vh 0;
     background-color: black;
     background-image: url("img/Logo_Minh_white_on_black_hi_res.jpg");
@@ -162,15 +163,6 @@ body{
       }
   }
 
-  #home-intro-bis{
-    background-color: black;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-  }
+  .home-about {
 
-  #home-about {
-    padding: 4em 0;
-    max-width: 900px;
-    margin: 0 auto;
   }
