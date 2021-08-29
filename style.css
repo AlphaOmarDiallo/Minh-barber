@@ -1,20 +1,126 @@
+
+/* ------ Styling all page ----- */
+*,
+*::before,
+*::after{
+    box-sizing: border-box
+}
+
+:root{
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-secondary: 'Open Sans', sans-serif;
+    --ff-type:'Special Elite', cursive;
+
+    --fw-reg:300;
+    --fw-bold: 900;
+
+    --clr-dark: #000000;
+    --clr-light: #ffffff;
+    --clr-accent: #0055A4;
+    --clr-accent2: #EF4135;
+
+    --fs-h1: 1.0rem;
+    --fs-h2: 1.75rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+    --fs-fs-footer: 0.8rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+            0.125em 0.125em 0.25em rgba(0,0,0, .125);
+} 
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 3.5rem;
+        --fs-h2: 2.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*General styles*/
+
 body{
-    margin: 0; 
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
     padding: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+/*Typography*/
+h1,
+h2,
+h3{
+    line-height: 1.1;
+    margin: 0;
+}
+
+h1{font-size: var(--fs-h1);}
+h2{font-size: var(--fs-h2);}
+h3{font-size: var(--fs-h3);}
+
+h2,
+h3{
+    text-align: left;
+}
+
+h1{
+ font-family: var(--ff-type) ;
+}
+
+strong{
+    font-weight: var(--fw-bold);
+}
+
+/*buttons*/
+
+.btn{
+    display: inline-block; 
+    padding: .5em 2.5em;
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out; 
+    box-shadow: var(--bs);
+}
+
+.btn:hover{
+    transform: scale(1.1); 
 }
 
 .sections{
-    padding: 4em 1em 0 1em;
-    max-width: 1100px;
+    padding: 2em 1em 1em 1em;
     margin: 0 auto;
+}
+
+.container-max-w{
+    max-width: 1100px;
+    margin: auto;
 }
 /* --------------------------------  Navigation   -------------------------------------------*/
 
 /* main nav */ 
 
   header {
-    --text: #f4f4f4;
-    --text-inverse: rgb(0, 0, 0);
+    --text: var(--clr-light);
+    --text-inverse: var(--clr-dark);
     --background: transparent;
     position: fixed;
     top: 0;
@@ -35,6 +141,7 @@ body{
     transition: background 250ms ease-in;
     background: var(--background);
     color: var(--text);
+    font-family: var(--ff-type);
   }
 
   @media (min-width: 459px) {
@@ -91,6 +198,16 @@ body{
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
   }
+
+  @media (min-width: 620px){
+    header{
+        font-size: 1.25rem;
+    }
+    
+    .nav__link{
+        font-size: 0.75rem;
+    }
+  }
    /* nav social */ 
 
   .social{
@@ -127,9 +244,9 @@ body{
   }
   
   .nav-scrolled {
-    --text: rgb(0, 0, 0);
-    --text-inverse: #000000;
-    --background: #f4f4f4;
+    --text: var(--clr-light);
+    --text-inverse: var(--clr-dark);
+    --background: rgba(0, 0, 0, 0.815);
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
   }
 
@@ -138,7 +255,7 @@ body{
   #home-intro {
     padding: 40vh 0;
     background-color: black;
-    background-image: url("img/Logo_Minh_white_on_black_hi_res.jpg");
+    background-image: url("img/Logo_Minh_white_on_black_hi_res.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position:center;
@@ -163,3 +280,234 @@ body{
       }
   }
 
+  /* ------------------ home about --------------------------*/
+
+  #home-about{
+      text-align: justify;
+      display: flex;
+      flex-flow: column nowrap; 
+  }
+
+  @media (min-width: 800px){
+      .des-photo{
+        display: grid;
+        grid-template-columns: 1fr 400px;
+        grid-template-areas: 
+            "description photo";
+        justify-self: center;
+        }
+
+      .home-about__despcription{
+          grid-area: description;
+          padding-right: 1em;
+      }
+
+      .home-about__image{
+          grid-area: photo;
+          margin: auto;
+          max-width: 350px; 
+          height: auto;
+      }
+  }
+
+  /* ----------------------------------------  home work ----------------------------------------------------- */
+
+  #home-work{
+      display: flex;
+      flex-flow: column wrap;
+      background-color: var(--clr-dark);
+      color: var(--clr-light);
+  }
+
+  #home-work h2{
+      padding-bottom: .5em;
+  }
+
+  #home-work img{
+      max-width: 350px;
+      height: auto;
+      padding: 0.5em;
+      margin:auto; 
+  }
+
+  .home-work__div{
+      margin: auto;
+  }
+
+  .home-work__des-photo{
+    padding: 0.5em;
+}
+
+  .artist_photo img,
+  .barber_photo img{
+      display: none;
+  }
+
+  @media (min-width: 800px){
+    .artist_photo img,
+    .barber_photo img{
+        display: block;
+    }
+
+    .home-work__des-photo{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+  /* ------------------------------ home testimonials -------------------------------------------------*/
+  #home-testimonials{
+    background-color: var(--clr-light);
+  }
+
+  #home-testimonials h2{
+    padding-bottom: 0.5em;
+  }
+  /* Slideshow container */
+.slideshow-container {
+    position: relative;
+    background: var(--clr-light);
+    box-shadow: var(--bs);
+    border-radius: 5px;
+  }
+  
+  /* Slides */
+  .mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: var(--clr-dark);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover{
+    background-color: var(--clr-accent);
+    color:var(--clr-light);
+  }
+  .next:hover{
+      background-color: var(--clr-accent2);
+      color: var(--clr-light);
+  }
+  
+  /* The dot/bullet/indicator container */
+  .dot-container {
+    text-align: center;
+    padding: 20px;
+    background: transparent;
+
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: var(--clr-dark);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  /* Add a background color to the active dot/circle */
+  .active, .dot:hover {
+    background-color: var(--clr-dark);
+  }
+  
+  /* Add an italic font style to all quotes */
+  q {font-style: italic;}
+  
+  /* Add a blue color to the author */
+  .author {
+      color: var(--clr-accent);
+      font-weight: bold;
+    }
+		
+/*---------------------------- Contact me ----------------------------------*/
+
+/*contact me section*/
+#home-contact{
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+}
+#home-contact h2{
+    padding-bottom: .5em;
+    text-align: center;
+}
+
+.form{
+    margin: auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: var(--ff-primary);
+}
+
+.form-label,
+.form-radio{
+    font-weight: var(--fw-bold);
+}
+
+.form-input,
+.form-textarea{
+    box-shadow: var(--bs);
+    padding: 12px 20px;
+    margin: .8em;
+    border-radius: 5px;
+    border: none;
+}
+.form-radio{
+    display: flex;
+}
+
+.form-label-radio{
+    margin-left: 1em;
+    padding: 1em;
+    width: 2em;
+    height: 2em;
+}
+.form-radio-btn{
+    padding-left: 1em;
+    margin-bottom: 1em;
+}
+
+.form .btn{
+    margin: 2em auto;
+    padding: 1em 4em;
+    border-radius: 5px;
+    border: none; 
+    box-shadow: var(--bs);
+}
+
+/* --------------------------- footer --------------------------- */
+
+footer{
+    background-color:whitesmoke;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
