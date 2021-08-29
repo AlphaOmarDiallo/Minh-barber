@@ -22,7 +22,7 @@ sectionOneOptions);
 
 sectionOneObserver.observe(sectionOne);
 
-/* lazy load*/
+/* lazy load
 document.addEventListener("DOMContentLoaded", function() {
   var lazyloadImages = document.querySelectorAll("img.lazy");    
   var lazyloadThrottleTimeout;
@@ -51,4 +51,4 @@ document.addEventListener("DOMContentLoaded", function() {
   document.addEventListener("scroll", lazyload);
   window.addEventListener("resize", lazyload);
   window.addEventListener("orientationChange", lazyload);
-});
+});*/
