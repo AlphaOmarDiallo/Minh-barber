@@ -254,8 +254,8 @@ strong{
   
   #home-intro {
     padding: 40vh 0;
-    background-color: black;
-    background-image: url("img/Logo_Minh_white_on_black_hi_res.webp");
+    background-color: var(--clr-dark);
+    background-image: url("img/Logo_minh_white_on_blue.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position:center;
