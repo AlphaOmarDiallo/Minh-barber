@@ -266,8 +266,6 @@ strong{
 
   h1{
       padding-top: 100px;
-      z-index: 998;
-
   }
 
   @media (min-width: 400px){
@@ -317,9 +315,7 @@ strong{
   #home-work{
       display: flex;
       flex-flow: column wrap;
-      /*background-color: var(--clr-dark);*/
-      background: rgb(22,24,74);
-      background: linear-gradient(100deg, rgba(22,24,74,1) 41%, rgba(0,0,0,1) 55%);
+      background-color: var(--clr-dark);
       color: var(--clr-light);
   }
 
@@ -351,6 +347,11 @@ strong{
     .artist_photo img,
     .barber_photo img{
         display: block;
+    }
+
+    #home-work{
+      background: var(--clr-dark);
+      background: linear-gradient(100deg, var(--clr-dark) 41%, rgba(0,0,0,1) 55%);
     }
 
     .home-work__des-photo{
