@@ -255,7 +255,7 @@ strong{
   #home-intro {
     padding: 40vh 0;
     background-color: var(--clr-dark);
-    background-image: url("img/Prez_Minh_1-03.jpg");
+    background-image: url("img/logo_background.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position:center;
@@ -266,6 +266,7 @@ strong{
 
   h1{
       padding-top: 100px;
+      z-index : 1000;
   }
 
   @media (min-width: 400px){
