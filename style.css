@@ -141,7 +141,7 @@ strong{
     transition: background 250ms ease-in;
     background: var(--background);
     color: var(--text);
-    font-family: var(--ff-type);
+    font-family: var(--ff-secondary);
   }
 
   @media (min-width: 459px) {
