@@ -9,7 +9,6 @@
 :root{
     --ff-primary: 'Roboto', sans-serif;
     --ff-secondary: 'Open Sans', sans-serif;
-    --ff-type:'Special Elite', cursive;
 
     --fw-reg:300;
     --fw-bold: 900;
@@ -77,7 +76,8 @@ h3{
 }
 
 h1{
- font-family: var(--ff-type) ;
+ font-family: var(--ff-secondary) ;
+ color: #ffffff;
 }
 
 strong{
