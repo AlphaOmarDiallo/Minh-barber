@@ -3,7 +3,7 @@
 *,
 *::before,
 *::after{
-    box-sizing: border-box
+   /* box-sizing: border-box */
 }
 
 :root{
@@ -42,6 +42,10 @@ html {
 }
 
 /*General styles*/
+html, body{ 
+    margin: 0;
+    height: 100%;
+}
 
 body{
     background: black;
@@ -253,6 +257,7 @@ strong{
   /*---------------------------------------------- Intro --------------------------------------*/
   
   #home-intro {
+    /*
     padding: 40vh 0;
     background-color: black;
     background-image: url("img/Prez_Minh_1-03.jpg");
@@ -261,7 +266,7 @@ strong{
     background-position:center;
     background-blend-mode: normal;
     color: white;
-    text-align: center;
+    text-align: center;*/
   }
 
   h1{
